@@ -15,6 +15,165 @@
 */
 
 .page {
+  max-width: 1440px;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background: var(--background-image) no-repeat top center,
+    var(--background-color);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  min-width: 700px;
+  font-family: var(--fantasy-font-family);
+  text-align: center;
+  color: var(--text-color);
+  margin: 102px 372px;
+  padding: 136px 0 23px;
+  background: var(--header-background);
+  border: 2px solid var(--stroke-color);
+}
+
+.header__link {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.header__title {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  text-transform: uppercase;
+  margin: 20px 55px;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.theme-menu__button {
+  font-family: var(--fantasy-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  background: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+  overflow: hidden;
+  opacity: 1;
+  transition: arrow 0.3s ease;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  margin-left: -20px;
+  animation: arrow 0.3s ease infinite;
+  pointer-events: none;
+}
+
+@keyframes arrow {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-2px);
+  }
+}
+
+.theme-menu__button:disabled:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible {
+  transition: width 0.3s ease;
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: translateX(0);
+  display: block;
+  position: absolute;
+  left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+  outline: none; /*задаём длинну линии до наведения курсора*/
+  outline: 2px; /*задаём ширину линии*/
+  opacity: 0.6;
+  content: "";
+  transition: width 0.3s ease; /*задаём время анимации*/
+}
+
+/* MAIN */
+
+.card {
+  min-width: 696px;
+  max-height: 959px;
+  background-color: var(--card-background);
+  color: var(--text-color);
+  border: 2px solid var(--stroke-color);
+  margin: 102px 372px 0;
+}
+
+.card__title {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 700;
+
+  /* display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center; */
+  padding: 5px 10px 5px 10px;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+}
+
+.card__text-container {
+  display: flex;
+  flex-direction: column;
+  margin: 25px 25px 0;
+  gap: 27px;
+}
+
+.card__text {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0%;
+}
+
+.image-label {
+  font-family: var(--fantasy-font-family);
+  position: absolute;
+  margin-left: 573px;
+  margin-top: 25px;
+  background-blend-mode: hard-light;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  -webkit-text-stroke: 1px #fff;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+@supports (-webkit-text-stroke: 1px #fff) {
+  .text-outline {
+    -webkit-text-stroke: 1px #fff;
+    text-shadow: 1px 0 #fff, 0 -1px #fff, -1px 0 #fff, 0 1px #fff;
+  }
 }
