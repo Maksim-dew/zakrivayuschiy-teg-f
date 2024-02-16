@@ -53,8 +53,11 @@
   gap: 14px;
 }
 
-.theme-menu__button {
+.button {
   font-family: var(--fantasy-font-family);
+}
+
+.theme-menu__button { 
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
@@ -118,7 +121,7 @@
 
 .card {
   min-width: 696px;
-  max-height: 959px;
+  /* max-height: 959px; */
   background-color: var(--card-background);
   color: var(--text-color);
   border: 2px solid var(--stroke-color);
@@ -177,3 +180,22 @@ align-items: center; */
     text-shadow: 1px 0 #fff, 0 -1px #fff, -1px 0 #fff, 0 1px #fff;
   }
 }
+
+.card__like-button-container {
+  display: flex;
+  justify-content: flex-end;
+    align-items: baseline;
+}
+
+.card__like-button {
+  width: 169px;
+  height: 38px;
+  border: 2px solid var(--stroke-color);
+  background: none;
+  margin: 25px 25px 25px 0; 
+font-size: 14px;
+font-weight: 400;
+line-height: 13px;
+}
+
+
