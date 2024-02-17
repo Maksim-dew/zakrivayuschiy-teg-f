@@ -19,6 +19,7 @@
   --mix-blend-color: var(--page-background);
   --stroke-color: var(--text-color);
   --label-stroke-color: var(--page-background);
+  --animation-contour-color: #000000;
 }
 
 :root.theme-dark {
@@ -35,4 +36,5 @@
   --mix-blend-color: var(--text-color);
   --stroke-color: var(--text-color);
   --label-stroke-color: var(--page-background);
+  --animation-contour-color: #00cc14;
 }
