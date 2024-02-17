@@ -55,19 +55,19 @@
 
 .button {
   font-family: var(--fantasy-font-family);
+  background: none;
+  border: none;
 }
 
-.theme-menu__button { 
+.theme-menu__button {
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
-  background: none;
-  cursor: pointer;
   text-transform: uppercase;
-  border: none;
-  overflow: hidden;
   opacity: 1;
   transition: arrow 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .theme-menu__button:disabled {
@@ -196,6 +196,16 @@ align-items: center; */
 font-size: 14px;
 font-weight: 400;
 line-height: 13px;
+}
+
+.footer {
+  display: flex;
+
+}
+.button__floppy {
+  width: 335px;
+  height: 55px;
+  /* padding: 15px, 20px, 15px, 20px; */
 }
 
 
