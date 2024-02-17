@@ -108,6 +108,7 @@
   overflow: hidden;
   opacity: 1;
   transition: opacity 0.3s ease;
+  pointer-events: none;
   cursor: pointer;
 }
 
@@ -401,6 +402,7 @@
   align-items: center;
   justify-content: center;
 }
+<<<<<<< HEAD
 .button__floppy {
   font-family: var(--fantasy-font-family);
   margin-top: 52px;
@@ -468,3 +470,10 @@ dialog[open] {
   inline-size: 293px;
   block-size: 38px;
 }
+=======
+
+.floppy-icon:hover {
+  mix-blend-mode: difference;
+  color: var(--page-background);
+} 
+>>>>>>> af28851567787abf23b6bda512e1a800acf726d3
