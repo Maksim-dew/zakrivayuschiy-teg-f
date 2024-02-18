@@ -15,14 +15,10 @@
 */
 
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
-  background: var(--background-image) no-repeat top center,
-    var(--background-color);
-  background-size: cover;
-  background-attachment: fixed;
 
   color: var(--text-color);
+  background: var(--background-image) no-repeat top center,
+    var(--background-color);
   background: repeating-linear-gradient(
       90deg,
       var(--background-color),
@@ -42,30 +38,24 @@
       var(--background-color-start),
       var(--background-color-end)
     );
-    font-variation-settings: "wght" var(--text-font-weight, 400);
+  background-size: cover;
+  background-attachment: fixed;
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
+  font-variation-settings: "wght" var(--text-font-weight, 400);
 }
-
-/* header */
-
-/* .header {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-} */
 
 .header {
   display: flex;
-    flex-direction: column;
-    max-width: 700px;
-    font-family: var(--fantasy-font-family);
-    text-align: center;
-    color: var(--text-color);
-    margin: 102px auto 104px auto;
-    padding: 136px 140px 25px;
-    background: var(--header-background);
-    border: 2px solid var(--stroke-color);
-
+  flex-direction: column;
+  max-width: 700px;
+  margin: 102px auto 104px auto;
+  border: 2px solid var(--stroke-color);
+  padding: 136px 140px 25px;
+  color: var(--text-color);
+  font-family: var(--fantasy-font-family);
+  text-align: center;
+  background: var(--header-background);
 }
 
 @media (width <= 375px) {
@@ -76,39 +66,38 @@
 
 .header__link {
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  text-transform: uppercase;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .header__link:focus {
   outline: none;
 }
 
-
 .header__title {
+  margin: 20px 55px;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
-  margin: 20px 55px;
 }
 
 .theme-menu__list {
-  font-size: 14px;
   display: flex;
   flex-direction: column;
   gap: 12px;
   width: -moz-min-content;
   width: min-content;
-  text-align: start;
   margin: 0 45.1%;
+  font-size: 14px;
+  text-align: start;
 }
 
 .theme-menu__button {
+  border: none;
   padding: 0;
+  opacity: 1;
+  overflow: hidden;
   text-transform: uppercase;
   background: none;
-  border: none;
-  overflow: hidden;
-  opacity: 1;
   transition: width 0.3s ease;
   cursor: pointer;
 }
@@ -126,8 +115,8 @@
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
+  margin-top: 1;
   margin-left: -20px;
-  margin-top: auto;
   animation: arrow 0.5s ease-in-out infinite alternate;
   pointer-events: none;
 }
@@ -137,9 +126,9 @@
 }
 
 .theme-menu__button:focus {
+  border-bottom: 2px solid transparent;
   outline: none;
   opacity: 0.6;
-  border-bottom: 2px solid transparent;
 }
 
 .theme-menu__button:focus-visible {
@@ -147,27 +136,25 @@
 }
 
 .theme-menu__button:focus-visible::after {
-  transform: translateX(0);
-  display: block;
+  content: "";
   position: absolute;
-  right: 0;
-  left: 0;
+  display: block;
   outline: none;
   outline: 2px;
   opacity: 0.6;
-  content: "";
+  transform: translateX(0);
 }
 
 .button {
-  font-family: var(--fantasy-font-family);
-  font-size: 14px;
   position: relative;
+  border: 2px solid var(--stroke-color);
   overflow: hidden;
   color: var(--mix-blend-color);
+  font-family: var(--fantasy-font-family);
+  font-size: 14px;
   background: none;
-  border: 2px solid var(--stroke-color);
-  cursor: pointer;
   transition: 0.3s ease;
+  cursor: pointer;
 }
 
 .button::before {
@@ -180,8 +167,8 @@
   height: 100%;
   overflow: hidden;
   background: var(--text-color);
-  transform: translateX(-100%);
   transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);
 }
 
 .button:hover::before {
@@ -202,28 +189,26 @@
 }
 
 .save-button {
-  padding: 15px 20px;
-  margin: 50px auto;
   display: flex;
-  gap: 8px;
   align-items: center;
+  gap: 8px;
+  margin: 50px auto;
+  padding: 15px 20px;
   background: var(--page-background);
 }
 
 @media (width <= 375px) {
   .save-button {
-    padding: 19px 20px;
     flex-direction: column;
+    padding: 19px 20px;
   }
 }
 
-/* MAIN */
-
 .main {
-  font-family: var(--main-font-family);
   display: flex;
   flex-direction: column;
   gap: 50px;
+  font-family: var(--main-font-family);
 }
 
 .section {
@@ -233,48 +218,46 @@
   gap: 50px;
 }
 
-/* Card */
-
 .card {
   max-width: 698px;
-  background-color: var(--card-background);
-  color: var(--text-color);
   border: 2px solid var(--stroke-color);
-
+  color: var(--text-color);
+  background-color: var(--card-background);
+  background-color: var(--page-background);
 }
 
 .card__title {
-  font-size: 18px;
-  font-weight: 700;
   padding: 5px 10px 5px 8px;
+  font-weight: 700;
+  font-size: 18px;
   font-variation-settings: "wght" var(--title-font-weight, 700);
 }
 
 .card__image {
-  object-fit: cover;
-  object-position: cover;
-  min-height: 700px;
   width: 100%;
+  min-height: 700px;
   border-top: 2px solid var(--stroke-color);
   border-bottom: 2px solid var(--stroke-color);
+  object-fit: cover;
+  object-position: cover;
 }
 
 @media (width <= 375px) {
   .card__image {
-    min-height: 371px;
     width: 100%;
+    min-height: 371px;
   }
 }
 .card__image-container {
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
 }
 
 .card__text-container {
   display: flex;
   flex-direction: column;
-  margin: 21px 24px 0;
   gap: 27px;
+  margin: 21px 24px 0;
 }
 
 @media (width <= 375px) {
@@ -285,47 +268,47 @@
 
 .card__text {
   font-family: var(--main-font-family);
-  font-size: 18px;
   font-weight: 400;
+  font-size: 18px;
   line-height: 21px;
   letter-spacing: 0%;
 }
 
 .image-label {
-  font-family: var(--fantasy-font-family);
   position: absolute;
-  right: 25px;
   top: 27px;
-  background-blend-mode: hard-light;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 14px;
-  -webkit-text-stroke: 1px #fff;
-  text-shadow: 1px 1px 1px #fff;
+  right: 25px;
   z-index: 1;
   opacity: 0.5;
-} 
+  font-family: var(--fantasy-font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-shadow: 1px 1px 1px #fff;
+  background-blend-mode: hard-light;
+  -webkit-text-stroke: 1px #fff;
+}
 
 @media (width <= 375px) {
   .image-label {
+    top: 25px;
     right: 12px;
-  top: 25px;
   }
 }
 
-@supports (-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) { 
-  .image-label { 
-    -webkit-text-stroke: 1px #fff; 
-    text-shadow: none; 
+@supports (-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) {
+  .image-label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px #fff;
   }
 }
 
 .card__icon-button {
-  padding: 0;
   width: 39px;
   height: 36px;
-  background: transparent;
   border: none;
+  padding: 0;
+  background: transparent;
   cursor: pointer;
 }
 
@@ -344,24 +327,22 @@
 }
 
 .card__like-button {
-  margin-left: 12px;
   width: 130px;
   height: 38px;
-  background: none;
   margin: 25px 25px 25px 4px;
-  font-size: 14px;
+  margin-left: 12px;
   font-weight: 400;
+  font-size: 14px;
   line-height: 13px;
+  background: none;
 }
 
 .like-icon {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   align-content: center;
 }
-
-/* Photo filters */
 
 .grayscale {
   filter: grayscale(50%);
@@ -392,17 +373,17 @@
 }
 
 .button__floppy {
-  font-family: var(--fantasy-font-family);
-  margin-top: 52px;
-  margin-bottom: 103px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 13px;
   width: 335px;
   height: 55px;
-  color: black;
-  background-color: #fff;
+  margin-top: 52px;
+  margin-bottom: 103px;
   border: 2px solid var(--stroke-color);
+  color: black;
+  font-family: var(--fantasy-font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 13px;
+  background-color: #fff;
 }
 
 .floppy-icon {
@@ -422,7 +403,6 @@
 }
 
 .floppy-color {
-  
   color: var(--text-color);
 }
 
@@ -446,8 +426,8 @@ dialog[open] {
 }
 
 .dialog__text {
-  font-family: var(--fantasy-font-family);
   color: var(--text-color);
+  font-family: var(--fantasy-font-family);
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
