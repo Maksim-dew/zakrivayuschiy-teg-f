@@ -42,36 +42,35 @@
       var(--background-color-start),
       var(--background-color-end)
     );
+    font-variation-settings: "wght" var(--text-font-weight, 400);
 }
 
 /* header */
 
-.header {
+/* .header {
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: center;
-}
+} */
 
-.header_content {
-  min-width: 700px;
-  font-family: var(--fantasy-font-family);
-  text-align: center;
-  color: var(--text-color);
-  margin: 100px 370px;
-  padding: 136px 0 25px;
-  background: var(--header-background);
-  border: 2px solid var(--stroke-color);
+.header {
+  display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    font-family: var(--fantasy-font-family);
+    text-align: center;
+    color: var(--text-color);
+    margin: 102px auto 104px auto;
+    padding: 136px 140px 25px;
+    background: var(--header-background);
+    border: 2px solid var(--stroke-color);
+
 }
 
 @media (width <= 375px) {
   .header {
     padding: 0 0 0 0;
-  }
-
-  .header_content {
-    width: 100%;
-    padding: 120px 0 25px;;
   }
 }
 
@@ -118,8 +117,10 @@
   margin-top: 3px;
 }
 
+.theme-menu__button:hover,
 .theme-menu__button:disabled {
   opacity: 0.6;
+  transition: 0.3s ease;
 }
 
 .theme-menu__button:disabled::before {
@@ -138,6 +139,7 @@
 .theme-menu__button:focus {
   outline: none;
   opacity: 0.6;
+  border-bottom: 2px solid transparent;
 }
 
 .theme-menu__button:focus-visible {
@@ -218,6 +220,7 @@
 /* MAIN */
 
 .main {
+  font-family: var(--main-font-family);
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -241,10 +244,10 @@
 }
 
 .card__title {
-  font-family: var(--main-font-family);
   font-size: 18px;
   font-weight: 700;
   padding: 5px 10px 5px 8px;
+  font-variation-settings: "wght" var(--title-font-weight, 700);
 }
 
 .card__image {
@@ -351,6 +354,13 @@
   line-height: 13px;
 }
 
+.like-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
 /* Photo filters */
 
 .grayscale {
@@ -401,14 +411,19 @@
 
 .dialog {
   width: clamp(341px, 50%, 357px);
-  border: 2px solid var(--accent-color, #000000);
+  border: 2px solid var(--stroke-color);
   padding: 31.5px 32.5px 30.5px 26px;
   overflow: hidden;
-  color: var(--accent-color, #000000);
-  font-family: var(--accent-font-family, monospace);
+  color: var(--text-color);
+  font-family: var(--fantasy-font-family);
   font-size: 14px;
   text-transform: uppercase;
-  background: var(--bg-color, #ffffff);
+  background: var(--background-color);
+}
+
+.floppy-color {
+  
+  color: var(--text-color);
 }
 
 dialog[open] {
@@ -432,7 +447,7 @@ dialog[open] {
 
 .dialog__text {
   font-family: var(--fantasy-font-family);
-  color: var(--accent-color, #000000);
+  color: var(--text-color);
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
@@ -440,7 +455,7 @@ dialog[open] {
 }
 
 .dialog__close-button {
-  border: 2px solid var(--accent-color, #000000);
+  border: 2px solid var(--stroke-color, #000000);
   padding: 9px 17px;
   font-size: 14px;
   text-align: center;
