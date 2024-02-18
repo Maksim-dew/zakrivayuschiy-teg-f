@@ -17,8 +17,6 @@
 .page {
 
   color: var(--text-color);
-  background: var(--background-image) no-repeat top center,
-    var(--background-color);
   background: repeating-linear-gradient(
       90deg,
       var(--background-color),
@@ -58,7 +56,7 @@
   background: var(--header-background);
 }
 
-@media (width <= 375px) {
+@media (width <= 490px) {
   .header {
     padding: 0 0 0 0;
   }
@@ -85,7 +83,6 @@
   flex-direction: column;
   gap: 12px;
   width: -moz-min-content;
-  width: min-content;
   margin: 0 45.1%;
   font-size: 14px;
   text-align: start;
@@ -139,7 +136,6 @@
   content: "";
   position: absolute;
   display: block;
-  outline: none;
   outline: 2px;
   opacity: 0.6;
   transform: translateX(0);
@@ -223,7 +219,6 @@
   border: 2px solid var(--stroke-color);
   color: var(--text-color);
   background-color: var(--card-background);
-  background-color: var(--page-background);
 }
 
 .card__title {
