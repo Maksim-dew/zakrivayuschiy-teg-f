@@ -105,6 +105,7 @@
 
 .theme-menu__button:hover,
 .theme-menu__button:disabled {
+  border-bottom: 2px solid transparent;
   opacity: 0.6;
   transition: 0.3s ease;
 }
@@ -218,7 +219,7 @@
   max-width: 698px;
   border: 2px solid var(--stroke-color);
   color: var(--text-color);
-  background-color: var(--card-background);
+  background-color: var(--header-background);
 }
 
 .card__title {

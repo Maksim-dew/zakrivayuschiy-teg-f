@@ -6,8 +6,6 @@
   --heart-color: #ff0000;
 
 
-
-
     --page-background: #fff;
     --background-color: #d3d3d3;
     --background-color-start: #e7e7e7;
@@ -19,6 +17,7 @@
     --mix-blend-color: var(--page-background);
     --stroke-color: var(--text-color);
     --label-stroke-color: var(--page-background);
+    --animation-contour-color: #000000;
 
 
     --page-background: #000;
@@ -32,4 +31,5 @@
     --mix-blend-color: var(--text-color);
     --stroke-color: var(--text-color);
     --label-stroke-color: var(--page-background);
+    --animation-contour-color: #00cc14;
 }
