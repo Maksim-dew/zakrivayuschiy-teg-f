@@ -49,7 +49,7 @@
   max-width: 700px;
   margin: 102px auto 104px auto;
   border: 2px solid var(--stroke-color);
-  padding: 136px 140px 25px;
+  padding:136px 0 25px 0;
   color: var(--text-color);
   font-family: var(--fantasy-font-family);
   text-align: center;
@@ -58,7 +58,7 @@
 
 @media (width <= 490px) {
   .header {
-    padding: 0 0 0 0;
+    padding: 120px 0 25px 0;
   }
 }
 
@@ -83,9 +83,8 @@
   flex-direction: column;
   gap: 12px;
   width: -moz-min-content;
-  margin: 0 45.1%;
   font-size: 14px;
-  text-align: start;
+  align-items: center;
 }
 
 .theme-menu__button {
@@ -124,8 +123,8 @@
 }
 
 .theme-menu__button:focus {
-  border-bottom: 2px solid transparent;
   outline: none;
+  border-bottom: 2px solid;
   opacity: 0.6;
 }
 
@@ -226,7 +225,8 @@
   padding: 5px 10px 5px 8px;
   font-weight: 700;
   font-size: 18px;
-  font-variation-settings: "wght" var(--title-font-weight, 700);
+  font-family: var(--main-font-family);
+  /* font-variation-settings: "wght" var(--title-font-weight, 700); */
 }
 
 .card__image {
