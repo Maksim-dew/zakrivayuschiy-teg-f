@@ -106,13 +106,12 @@
 .theme-menu__button:disabled {
   border-bottom: 2px solid transparent;
   opacity: 0.6;
-  transition: 0.3s ease;
 }
 
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
-  margin-top: 1;
+  margin-top: 1px;
   margin-left: -20px;
   animation: arrow 0.5s ease-in-out infinite alternate;
   pointer-events: none;
@@ -282,7 +281,6 @@
   line-height: 14px;
   text-shadow: 1px 1px 1px #fff;
   background-blend-mode: hard-light;
-  -webkit-text-stroke: 1px #fff;
 }
 
 @media (width <= 375px) {
@@ -295,7 +293,7 @@
 @supports (-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) {
   .image-label {
     text-shadow: none;
-    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
   }
 }
 
