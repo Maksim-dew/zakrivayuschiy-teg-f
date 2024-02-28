@@ -47,7 +47,7 @@
   display: flex;
   flex-direction: column;
   max-width: 700px;
-  margin: 102px auto 104px auto;
+  margin: 102px auto 100px auto;
   border: 2px solid var(--stroke-color);
   padding:136px 0 25px 0;
   color: var(--text-color);
@@ -73,7 +73,7 @@
 }
 
 .header__title {
-  margin: 20px 55px;
+  margin: 18px 55px;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
 }
@@ -196,7 +196,7 @@
 @media (width <= 375px) {
   .save-button {
     flex-direction: column;
-    padding: 19px 20px;
+    padding: 15px 20px;
   }
 }
 
@@ -222,7 +222,7 @@
 }
 
 .card__title {
-  padding: 5px 10px 5px 8px;
+  padding: 5px 10px 5px 10px;
   font-weight: 700;
   font-size: 18px;
   font-family: var(--main-font-family);
@@ -306,6 +306,7 @@
   padding: 0;
   background: transparent;
   cursor: pointer;
+  margin-right: -7px;
 }
 
 .card__icon-button:focus {
@@ -400,6 +401,13 @@
 
 .floppy-color {
   color: var(--text-color);
+}
+
+@media (width <= 375px) {
+  .floppy-icon {
+    width: 28px;
+    height: 28px;
+  }
 }
 
 dialog[open] {
