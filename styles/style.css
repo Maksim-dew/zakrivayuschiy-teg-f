@@ -128,7 +128,6 @@
 
 .theme-menu__button:disabled:hover {
   opacity: 0.6;
-
 }
 
 .theme-menu__button:focus {
@@ -137,19 +136,9 @@
 }
 
 .theme-menu__button:focus-visible {
-  text-decoration: underline solid var(--text-color);
-  text-decoration-thickness: 2px;
+  background-size: 100% 2px;
   opacity: 0.6;
 }
-
-/* .theme-menu__button:focus-visible::after {
-  content: "";
-  position: absolute;
-  display: block;
-  outline: 2px;
-  opacity: 0.6;
-  transform: translateX(0);
-} */
 
 .button {
   position: relative;
