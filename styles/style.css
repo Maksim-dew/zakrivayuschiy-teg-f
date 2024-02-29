@@ -40,7 +40,7 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: "wght" var(--text-font-weight, 400);
+  font-variation-settings: "wght" 400;
 }
 
 .header {
@@ -89,13 +89,19 @@
 
 .theme-menu__button {
   border: none;
-  padding: 0;
   opacity: 1;
-  overflow: hidden;
+  padding: 0 0 2px 0;
   text-transform: uppercase;
   background: none;
   transition: width 0.3s ease;
   cursor: pointer;
+
+  text-decoration: none;
+    background-image: linear-gradient(var(--text-color), var(--text-color));
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 0.3s;
 }
 
 .theme-menu__item {
@@ -104,7 +110,6 @@
 
 .theme-menu__button:hover,
 .theme-menu__button:disabled {
-  border-bottom: 2px solid transparent;
   opacity: 0.6;
 }
 
@@ -117,28 +122,34 @@
   pointer-events: none;
 }
 
+.theme-menu__button:hover {
+  background-size: 100% 2px;
+}
+
 .theme-menu__button:disabled:hover {
   opacity: 0.6;
+
 }
 
 .theme-menu__button:focus {
   outline: none;
-  border-bottom: 2px solid;
   opacity: 0.6;
 }
 
 .theme-menu__button:focus-visible {
+  text-decoration: underline solid var(--text-color);
+  text-decoration-thickness: 2px;
   opacity: 0.6;
 }
 
-.theme-menu__button:focus-visible::after {
+/* .theme-menu__button:focus-visible::after {
   content: "";
   position: absolute;
   display: block;
   outline: 2px;
   opacity: 0.6;
   transform: translateX(0);
-}
+} */
 
 .button {
   position: relative;
@@ -225,7 +236,7 @@
   font-weight: 700;
   font-size: 18px;
   font-family: var(--main-font-family);
-  /* font-variation-settings: "wght" var(--title-font-weight, 700); */
+  font-variation-settings: "wght" 700;
 }
 
 .card__image {
