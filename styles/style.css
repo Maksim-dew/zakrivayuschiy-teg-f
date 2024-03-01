@@ -121,9 +121,6 @@
   pointer-events: none;
 }
 
-.theme-menu__button:hover {
-  /* background-size: 100% 2px; */
-}
 
 .theme-menu__button:disabled:hover {
   opacity: 0.6;
