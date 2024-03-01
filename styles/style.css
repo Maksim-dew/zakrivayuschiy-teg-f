@@ -40,7 +40,7 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: "wght" 400;
+  font-variation-settings: var(--text-font-weight);
 }
 
 .header {
@@ -115,15 +115,14 @@
 
 .theme-menu__button:disabled::before {
   content: "▶";
-  position: absolute;
-  margin-top: 1px;
+  position: fixed;
   margin-left: -20px;
   animation: arrow 0.5s ease-in-out infinite alternate;
   pointer-events: none;
 }
 
 .theme-menu__button:hover {
-  background-size: 100% 2px;
+  /* background-size: 100% 2px; */
 }
 
 .theme-menu__button:disabled:hover {
@@ -225,7 +224,7 @@
   font-weight: 700;
   font-size: 18px;
   font-family: var(--main-font-family);
-  font-variation-settings: "wght" 700;
+  font-variation-settings: var(--title-font-weight);
 }
 
 .card__image {
@@ -234,7 +233,7 @@
   border-top: 2px solid var(--stroke-color);
   border-bottom: 2px solid var(--stroke-color);
   object-fit: cover;
-  object-position: cover;
+  object-position: center;
 }
 
 @media (width <= 375px) {
@@ -290,10 +289,12 @@
   }
 }
 
-@supports (-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) {
+@supports (text-stroke: 1px var(--label-stroke-color)) or
+  (-webkit-text-stroke: 1px var(--label-stroke-color)) {
   .image-label {
     text-shadow: none;
-    text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px var(--label-stroke-color);
+    text-stroke: 1px var(--label-stroke-color);
   }
 }
 
@@ -388,8 +389,7 @@
 .dialog {
   width: clamp(341px, 50%, 357px);
   border: 2px solid var(--stroke-color);
-  padding: 31.5px 32.5px 30.5px 26px;
-  overflow: hidden;
+  padding: 30px 0;
   color: var(--text-color);
   font-family: var(--fantasy-font-family);
   font-size: 14px;
@@ -445,4 +445,23 @@ dialog[open] {
   cursor: pointer;
   inline-size: 293px;
   block-size: 38px;
+}
+
+.floppy-image {
+  width: 21px;
+  height: 21px;
+  mix-blend-mode: difference;
+}
+
+@media (width <= 375px) {
+  .floppy-image {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.dialog .floppy-image {
+  width: 39px;
+  height: 39px;
+  mix-blend-mode: normal;
 }

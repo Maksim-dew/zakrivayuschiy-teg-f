@@ -23,7 +23,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root.theme-auto {
+  :root {
   --background-image: url(../images/background-dark.png);
   --card-background: #000;
   --page-background: #000;

@@ -20,6 +20,7 @@
   --stroke-color: var(--text-color);
   --label-stroke-color: var(--page-background);
   --animation-contour-color: #000000;
+  
 }
 
 :root.theme-dark {
